@@ -33,11 +33,20 @@ var employeesList = [
         salary: 4500
     }
 ];
+
+function Viz() {
+
+}
+
+function Del() {
+
+}
+
 function showList() {
-    var myTable = '<table class="table table-condensed" border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table class="table table-condensed" border="1"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th><th>Vizualizare</th><th>Stergere</th></tr>';
     for(var i in employeesList) {
         myTable += '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+
-            '</td><td>'+employeesList[i].salary+'</td></tr>';
+            '</td><td>'+employeesList[i].salary+'</td><td><button onclick="Viz()">Vizualizare</button></td><td><button onclick="del()">Stergere</button></td></tr>';
     }
     myTable += '</table>';
     var container = document.getElementById('listcontainer');
